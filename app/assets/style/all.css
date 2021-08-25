@@ -5,6 +5,7 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,6 +56,30 @@ table {
   border-spacing: 0;
 }
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -80,6 +105,9 @@ img {
   padding-top: 60px;
   padding-bottom: 40px;
   color: #650300;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .container {
@@ -326,14 +354,305 @@ img {
   margin-top: 16px;
   margin-bottom: 8px;
   color: #650300;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ad ul li p {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .products ul > li {
   width: 100%;
 }
 
-.products ul > li img {
+.products ul > li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+
+.products ul > li a img {
   width: 635px;
+}
+
+.products ul > li a .product-title {
+  color: #AA0601;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products ul > li a .product-title .material-icons-outlined {
+  font-size: 44px;
+  margin-right: 10px;
+}
+
+.products ul > li a .product-title .title {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+}
+
+.products ul > li:last-child a {
+  margin-bottom: 80px;
+}
+
+.products ul > li:nth-child(2) a {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.co-branded {
+  padding-bottom: 80px;
+  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true") center center;
+}
+
+.co-branded .block-title {
+  color: #fff;
+}
+
+.co-branded ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.co-branded ul li a {
+  display: block;
+  width: 540px;
+  height: 455px;
+  color: #AA0601;
+  text-decoration: none;
+  font-size: 72px;
+  line-height: 455px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.co-branded ul li a .bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.co-branded ul li:nth-child(1) a {
+  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-8.png?raw=true");
+  background-size: 100% 100%;
+}
+
+.co-branded ul li:nth-child(2) a {
+  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-9.png?raw=true");
+  background-size: 100% 100%;
+}
+
+.recommend {
+  padding-bottom: 80px;
+}
+
+.recommend .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recommend .cards .card {
+  width: 255px;
+}
+
+.recommend .cards .card .img {
+  width: 255px;
+  height: 256px;
+}
+
+.recommend .cards .card .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.recommend .cards .text {
+  height: 204px;
+  padding: 16px;
+  border: 1px solid #DEE2E6;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 2px 6px #DEE2E6;
+          box-shadow: 0px 2px 6px #DEE2E6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.recommend .cards .text .name {
+  padding-bottom: 8px;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.recommend .cards .text .description {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.recommend .cards .text .date {
+  margin-top: auto;
+  color: #707070;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact {
+  background-color: #FBF2F2;
+  padding-bottom: 64px;
+}
+
+.contact .wrap {
+  max-width: 730px;
+}
+
+.contact .wrap .block-title {
+  color: #000;
+  padding-bottom: 24px;
+}
+
+.contact .wrap .text {
+  padding-bottom: 20px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact .wrap li {
+  padding-bottom: 16px;
+}
+
+.contact .wrap li:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .wrap .label {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 4px;
+}
+
+.contact .wrap input, .contact .wrap textarea {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 0;
+  border-width: 1px;
+  background-color: transparent;
+}
+
+.contact .wrap input::-webkit-input-placeholder, .contact .wrap textarea::-webkit-input-placeholder {
+  padding-left: 16px;
+  padding-top: 14px;
+}
+
+.contact .wrap input:-ms-input-placeholder, .contact .wrap textarea:-ms-input-placeholder {
+  padding-left: 16px;
+  padding-top: 14px;
+}
+
+.contact .wrap input::-ms-input-placeholder, .contact .wrap textarea::-ms-input-placeholder {
+  padding-left: 16px;
+  padding-top: 14px;
+}
+
+.contact .wrap input::placeholder, .contact .wrap textarea::placeholder {
+  padding-left: 16px;
+  padding-top: 14px;
+}
+
+.contact .wrap .agree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 40px;
+}
+
+.contact .wrap .agree input.checkbox {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+.contact .wrap .agree p {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact .wrap .question {
+  height: 136px;
+}
+
+.contact .wrap .submit {
+  width: 350px;
+  height: 54px;
+  background-color: #AA0601;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 700;
 }
 
 .footer {

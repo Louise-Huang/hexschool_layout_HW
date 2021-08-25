@@ -2,6 +2,32 @@
 @import 'mixin.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,900&display=swap');
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
 
 $header-color: #AA0601;
 $font-color: #650300;
@@ -31,6 +57,9 @@ img{
   padding-top: 60px;
   padding-bottom: 40px;
   color: $font-color;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 .container{
   max-width: 1920px;
@@ -184,6 +213,7 @@ img{
         display: flex;
         justify-content: center;
         align-items: center;
+        // font-size: 83.83px;
       }
       h3{
         font-size: 24px;
@@ -191,6 +221,16 @@ img{
         margin-top: 16px;
         margin-bottom: 8px;
         color: $font-color;
+        font-family: source-han-sans-traditional,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      p{
+        font-size: 16px;
+        line-height: 24px;
+        font-family: source-han-sans-traditional,sans-serif;
+        font-weight: 400;
+        font-style: normal;
       }
     }
   }
@@ -198,13 +238,229 @@ img{
 .products{
   ul > li{
     width: 100%;
-    img{
-      width: 635px;
-      // height: 320px;
+    a{
+
+      display: flex;
+      text-decoration: none;
+      margin-bottom: 32px;
+      
+      
+      img{
+        width: 635px;
+        // height: 320px;
+      }
+      .product-title{
+        color: $header-color;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        .material-icons-outlined{
+          font-size: 44px;
+          margin-right: 10px;
+        }
+        .title{
+          font-family: 'Roboto', sans-serif;
+          font-style: italic;
+          font-weight: 900;
+          font-size: 48px;
+          line-height: 72px;
+        }
+      }
+    }
+    &:last-child{
+      a{
+        margin-bottom: 80px;
+      }
+    }
+    &:nth-child(2){
+      a{
+        flex-direction: row-reverse;
+      }
     }
   }
 }
 
+.co-branded{
+  // height: 705px;
+  padding-bottom: 80px;
+  background: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true') center center;
+  .block-title{
+    color: #fff;
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    li{
+      a{
+        display: block;
+        width: 540px;
+        height: 455px;
+        color: $header-color;
+        text-decoration: none;
+        font-size: 72px;
+        line-height: 455px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        .bg{
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255,255,255,0.6);
+        }
+      }
+      &:nth-child(1){
+        a{
+          background: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-8.png?raw=true');
+          background-size: 100% 100%;
+        }
+      }
+      &:nth-child(2){
+        a{
+          background: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-9.png?raw=true');
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
+
+.recommend{
+  padding-bottom: 80px;
+  .cards{
+    display: flex;
+    justify-content: space-between;
+    .card{
+      width: 255px;
+      
+      .img{
+        width: 255px;
+        height: 256px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit:cover;
+          border-radius: 4px 4px 0 0;
+        }
+      }
+    }
+    .text{
+      height: 204px;
+      padding: 16px;
+      // background-color: pink;
+      border: 1px solid #DEE2E6;
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      box-sizing: border-box;
+      box-shadow: 0px 2px 6px #DEE2E6;
+      display: flex;
+      flex-direction: column;
+      .name{
+        padding-bottom: 8px;
+        font-size: 14px;
+        line-height: 21px;
+        font-family: source-han-sans-traditional,sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .description{
+        font-size: 16px;
+        line-height: 24px;
+        font-family: source-han-sans-traditional,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .date{
+        margin-top: auto;
+        color: #707070;
+        font-size: 14px;
+        line-height: 21px;
+        font-family: source-han-sans-traditional,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+.contact{
+  background-color: #FBF2F2;  
+  padding-bottom: 64px;
+  .wrap{
+    max-width: 730px;
+    .block-title{
+      color: #000;
+      padding-bottom: 24px;
+    }
+    .text{
+      padding-bottom: 20px;
+      font-size: 20px;
+      line-height: 30px;
+      font-family: source-han-sans-traditional,sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    li{
+      padding-bottom: 16px;
+      &:last-child{
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .label{
+      font-size: 16px;
+      line-height: 24px;
+      font-family: source-han-sans-traditional,sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      padding-bottom: 4px;
+    }
+    input, textarea{
+      display: block;
+      width: 100%;
+      height: 50px;
+      border-radius: 0;
+      border-width: 1px;
+      background-color: transparent;
+      &::placeholder{
+        padding-left: 16px;
+        padding-top: 14px;
+      }
+    }
+    
+    .agree{
+      display: flex;
+      align-items: center;
+      input.checkbox{
+        width: 24px;
+        height: 24px;
+        margin-right: 4px;
+      }
+      p{
+        font-size: 16px;
+        line-height: 24px;
+        font-family: source-han-sans-traditional,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      padding-bottom: 40px;
+    }
+
+    .question{
+      height: 136px;
+    }
+    .submit{
+      width: 350px;
+      height: 54px;
+      background-color: $header-color;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 700;
+    }
+  }
+}
 
 .footer{
   font-family: 'Roboto', sans-serif;
