@@ -151,7 +151,9 @@ img{
   // background-position: center;
   // background-size: auto 100%;
   .img{
-    height: 840px;
+    // height: 840px;
+    height: 100%;
+    width: 100%;
     background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png') 0% 0% no-repeat;
     background-size: 100% auto;
     @include phone() {
