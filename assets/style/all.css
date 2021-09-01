@@ -98,12 +98,10 @@ img {
   font-weight: 700;
   font-style: normal; }
 
-.container {
-  max-width: 1920px; }
-
 .wrap {
   max-width: 1110px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 15px; }
   @media (max-width: 992px) {
     .wrap {
       max-width: 690px; } }
