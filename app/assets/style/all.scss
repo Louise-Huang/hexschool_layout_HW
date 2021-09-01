@@ -61,12 +61,15 @@ img{
   font-weight: 700;
   font-style: normal;
 }
-.container{
-  max-width: 1920px;
-}
+// .container{
+//   // max-width: 1920px;
+//   max-width: 1140px;
+// }
 .wrap{
   max-width: 1110px;
+  // max-width: 1140px;
   margin: 0 auto;
+  padding: 0 15px;
   @include tablet() {
     max-width: 690px;
   }
